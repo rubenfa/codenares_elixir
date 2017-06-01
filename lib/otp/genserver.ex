@@ -2,8 +2,8 @@ defmodule Codenares.OTP.Calculator do
   use GenServer
 
   # INTERFACE
-  def start_link(current) do
-    GenServer.start_link(__MODULE__, current, name: __MODULE__ )
+  def start_link(current, opts \\ []) do
+    GenServer.start_link(__MODULE__, current, opts )
   end
 
   def add(n) when is_number(n) do
@@ -37,7 +37,7 @@ defmodule Codenares.OTP.Calculator do
   end
 
   def handle_call({:div, n}, _from, current) do
-    {:reply, current / n1, current / n}
+    {:reply, current / n, current / n}
   end
 
   def handle_call({:mult, n}, _from, current) do
