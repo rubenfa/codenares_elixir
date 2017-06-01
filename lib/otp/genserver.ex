@@ -1,37 +1,54 @@
-defmodule Codenares.OTP.NumberServer do
+defmodule Codenares.OTP.Calculator do
   use GenServer
 
   # INTERFACE
-  def start_link(current_number) do
-    GenServer.start_link(__MODULE__, current_number, name: __MODULE__)
+  def start_link(current) do
+    GenServer.start_link(__MODULE__, current, name: __MODULE__ )
   end
 
-  def next_number do
-   GenServer.call(__MODULE__, :next_number)
+  def add(n) when is_number(n) do
+    GenServer.cast(__MODULE__, {:add, n})
   end
 
-  def increment_number(increment) do
-    GenServer.cast(__MODULE__, {:increment_number, increment})
+  def sub(n) when is_number(n) do
+    GenServer.cast(__MODULE__, {:sub, n})
   end
 
-  def status do
-    GenServer.call(__MODULE__, :status)
+  def mult(n) when is_number(n) do
+    GenServer.call(__MODULE__, {:mult, n})
+  end
+
+  def div(n) when is_number(n) do
+    GenServer.call(__MODULE__, {:div, n})
+  end
+
+  def get_current do    
+    GenServer.call(__MODULE__, :current)
+  end
+
+  def stop do
+    GenServer.stop(__MODULE__)
   end
 
   # IMPLEMENTACIÓN GenServer
-  def handle_call(:next_number, _from, current_number) do
-    {:reply, current_number, current_number + 1}
+
+  def handle_call(:current, _from, current) do
+    {:reply, current, current}
   end
 
-  def handle_call(:status, _from, current_number) do
-    {:reply, current_number, current_number}
+  def handle_call({:div, n}, _from, current) do
+    {:reply, current / n1, current / n}
   end
 
-  def handle_cast({:increment_number, increment}, current_number) do
-    {:noreply, current_number + increment}
+  def handle_call({:mult, n}, _from, current) do
+    {:reply, current * n, current * n}
   end
 
-  def format_status(_reason, [ _pdict, state ]) do
-    [data: [{'State', "My current state is '#{inspect state}', and I'm happy"}]]
+  def handle_cast({:add, n}, current) do
+    {:noreply, current + n }
+  end
+
+  def handle_cast({:sub, n}, current) do
+    {:noreply, current - n }
   end
 end

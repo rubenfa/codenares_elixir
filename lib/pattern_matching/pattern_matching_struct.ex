@@ -2,7 +2,7 @@ defmodule Codenares.PatternMatching.Player do
 
   defstruct name: "", level: 1, type: :warrior, health: 100, alive: true
 
-  alias MyModules.PatternMatching.Player
+  alias Codenares.PatternMatching.Player
 
   def attack(%Player{alive: false}, _, _ ) do
     {:error, "A dead player cannot attack"}
