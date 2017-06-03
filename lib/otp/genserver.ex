@@ -2,32 +2,32 @@ defmodule Codenares.OTP.Calculator do
   use GenServer
 
   # INTERFACE
-  def start_link(current, opts \\ []) do
-    GenServer.start_link(__MODULE__, current, opts )
+  def start_link(current, name) do
+    GenServer.start_link(__MODULE__, current, name: name )
   end
 
-  def add(n) when is_number(n) do
-    GenServer.cast(__MODULE__, {:add, n})
+  def add(p_name, n) when is_number(n) do
+    GenServer.cast(p_name, {:add, n})
   end
 
-  def sub(n) when is_number(n) do
-    GenServer.cast(__MODULE__, {:sub, n})
+  def sub(p_name, n) when is_number(n) do
+    GenServer.cast(p_name, {:sub, n})
   end
 
-  def mult(n) when is_number(n) do
-    GenServer.call(__MODULE__, {:mult, n})
+  def mult(p_name, n) when is_number(n) do
+    GenServer.call(p_name, {:mult, n})
   end
 
-  def div(n) when is_number(n) do
-    GenServer.call(__MODULE__, {:div, n})
+  def div(p_name, n) when is_number(n) do
+    GenServer.call(p_name, {:div, n})
   end
 
-  def get_current do    
-    GenServer.call(__MODULE__, :current)
+  def get_current(p_name) do    
+    GenServer.call(p_name, :current)
   end
 
   def stop do
-    GenServer.stop(__MODULE__)
+    GenServer.stop(:calculator)
   end
 
   # IMPLEMENTACIÓN GenServer
@@ -51,4 +51,9 @@ defmodule Codenares.OTP.Calculator do
   def handle_cast({:sub, n}, current) do
     {:noreply, current - n }
   end
+
+  def terminate(reason, _status) do
+    IO.puts "Stop because #{inspect reason}"
+    :ok 
+  end 
 end
