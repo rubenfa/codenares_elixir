@@ -12,3 +12,14 @@
 
 +++?image=https://raw.githubusercontent.com/rubenfa/codenares_elixir/master/img/patricio1.jpg
 ---
+#### Primer contacto con la programación funcional con Caml
+
+![Image-Absolute](img/caml1.png)
+
++++
+
+- En la universidad |
+- En el laboratorio de Programación avanzada  |
+- Curioso, pero inútil 
+
++++
