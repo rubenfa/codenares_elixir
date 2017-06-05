@@ -20,6 +20,11 @@
 
 - En la universidad |
 - En el laboratorio de Programación avanzada  |
-- Curioso, pero inútil 
+- **Curioso, pero inútil** |
 
 +++
+
+---
+#### ¿Y después de tantos años por qué volver a la programación funcional?
++++?image=https://raw.githubusercontent.com/rubenfa/codenares_elixir/master/img/awesome.jpg
+
