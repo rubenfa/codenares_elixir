@@ -3,7 +3,6 @@ defmodule PlayerTest do
   import ExUnit.CaptureIO
   doctest MyModules.PatternMatching.Player
 
-
   alias MyModules.PatternMatching.Player
 
   test "Solo puede atacar un jugador que esté vivo" do
