@@ -8,5 +8,8 @@
 #### A veces escribo en un blog: [www.charlascylon.com](www.charlascylon.com)
 ![Image-Absolute](img/avatar-icon.png)
 ---
-![Image-Absolute](img/patricio1.jpg)
+#### ¿Y por qué lo de tontos?
+<br>
+
++++?image=(img/patricio1.jpg)
 ---
