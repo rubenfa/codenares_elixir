@@ -16,13 +16,9 @@
 
 ![Image-Absolute](img/caml1.png)
 
-+++
-
 - En la universidad |
 - En el laboratorio de Programación avanzada  |
 - **Curioso, pero inútil** |
-
-+++
 
 ---
 #### ¿Y después de tantos años por qué volver a la programación funcional?
