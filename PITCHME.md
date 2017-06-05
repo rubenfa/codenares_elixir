@@ -8,5 +8,5 @@
 #### A veces escribo en un blog: [www.charlascylon.com](www.charlascylon.com)
 ![Image-Absolute](img/avatar-icon.png)
 ---
-+++?https://raw.githubusercontent.com/rubenfa/codenares_elixir/master/img/patricio1.jpg
++++?image=https://raw.githubusercontent.com/rubenfa/codenares_elixir/master/img/patricio1.jpg
 ---
