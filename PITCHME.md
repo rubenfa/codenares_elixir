@@ -8,5 +8,5 @@
 #### A veces escribo en un blog: [www.charlascylon.com](www.charlascylon.com)
 ![Image-Absolute](img/avatar-icon.png)
 ---
-![Image-Absolute](img/patricio1.png)
+![Image-Absolute](img/patricio1.jpg)
 ---
