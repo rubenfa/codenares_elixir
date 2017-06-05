@@ -9,7 +9,6 @@
 ![Image-Absolute](img/avatar-icon.png)
 ---
 #### ¿Y por qué lo de tontos?
-<br>
 
 +++?image=https://raw.githubusercontent.com/rubenfa/codenares_elixir/master/img/patricio1.jpg
 ---
