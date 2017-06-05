@@ -11,5 +11,5 @@
 #### ¿Y por qué lo de tontos?
 <br>
 
-+++?image=(img/patricio1.jpg)
++++?image=https://raw.githubusercontent.com/rubenfa/codenares_elixir/master/img/patricio1.jpg
 ---
