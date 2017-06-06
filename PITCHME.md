@@ -1,13 +1,15 @@
 ## Elixir para <span style="font-size:0.6em; color:gray">~~tontos~~</span> todos
 ---
-## Elixir para <span style="font-size:0.6em; color:gray">~~tontos~~</span> todos
-#### Objetivo
----
 ## ¿Quién soy yo?
 #### Resumen: un tío normal, que hace cosas normales
 #### A veces escribo en un blog: [www.charlascylon.com](www.charlascylon.com)
+#### En Twitter soy @_rubenfa.
 ![Image-Absolute](img/avatar-icon.png)
 ---
+## Elixir para <span style="font-size:0.6em; color:gray">~~tontos~~</span> todos
+#### Objetivo
+---
+
 #### ¿Y por qué lo de tontos?
 
 +++?image=https://raw.githubusercontent.com/rubenfa/codenares_elixir/master/img/patricio1.jpg
@@ -91,7 +93,7 @@ printfn "%A" numeros10
 ---
 #### ¿Y cómo empecé con Elixir?
 
-![Image-Absolute](img/mindfuck.jpg)
+![Image-Absolute](img/twitter.jpg)
 ---
 ### ¿Qué es Elixir?
 ![Image-Absolute](img/valim.jpg)
@@ -110,5 +112,105 @@ printfn "%A" numeros10
 #### Por fin, una sintaxis funcional que entiendo
 +++?image=https://raw.githubusercontent.com/rubenfa/codenares_elixir/master/img/patricio2.jpg
 ---
+#### IEX (Interactive Elixir)
+![Image-Absolute](img/iex.png)
+---
+#### Elixir es de tipado dinámico
+```
+iex(2)> 1 + 1
+2
+iex(3)> 1 + "1"
+** (ArithmeticError) bad argument in arithmetic expression
+    :erlang.+(1, "1")
+iex(3)> 
+```
+---
+### TIPOS
+#### Atoms
+```
+iex(9)> :uno
+:uno
+iex(10)> :dos
+:dos
+iex(11)> :uno == String.to_atom("uno")
+true
+```
+---
+### TIPOS
+#### Listas
+```
+iex(14)> [1,2, true, "cuatro", 5]
+[1, 2, true, "cuatro", 5]
+iex(15)> [1,2,6,7] ++ [4,5]
+[1, 2, 6, 7, 4, 5]
+iex(16)> [1,2,true,3,4,false] -- [true,false]
+[1, 2, 3, 4]
+``` 
+---
+### TIPOS
+#### Tuplas
 
+``` elixir
+result = {1, :error, "Variable not found"}
+{1, :error, "Variable not found"}
+iex(19)> {result_value, result_atom, result_message} = result
+{1, :error, "Variable not found"}
+iex(20)> result_value
+1
+iex(21)> result_atom
+:error
+iex(22)> result_message
+"Variable not found"
+``` 
+@[1-2]
+@[3-4]
+@[5-10]
+---
+### TIPOS
+#### Listas clave valor
+
+``` elixir
+iex(23)> [{:nombre, "Rubén"}, {:apellido,"Fernández"}, {:edad, 22}]
+[nombre: "Rubén", apellido: "Fernández", edad: 22]
+iex(24)> [nombre: "Rubén", apellido: "Fernández", edad: 22]
+[nombre: "Rubén", apellido: "Fernández", edad: 22]
+iex(25)> persona = [nombre: "Rubén", apellido: "Fernández", edad: 22]
+[nombre: "Rubén", apellido: "Fernández", edad: 22]
+iex(26)> persona[:nombre]
+"Rubén"
+```
+@[1-2]
+@[3-4]
+@[5-8]
+
+---
+### TIPOS
+#### Maps
+
+``` elixir
+iex(27)> %{ :nombre => "Rubén", "apellido" => "Fernández", 22 => false} 
+%{22 => false, :nombre => "Rubén", "apellido" => "Fernández"}
+iex(29)> persona = %{ :nombre => "Rubén", "apellido" => "Fernández", 22 => false}
+%{22 => false, :nombre => "Rubén", "apellido" => "Fernández"}
+iex(30)> persona[22]
+false
+```
+---
+### TIPOS
+#### Estructuras
+
+```elixir
+defmodule Persona do
+    defstruct nombre: "", apellido: "", edad: 0
+end
+```
+
+```elixir
+iex(2)> persona = %Persona{nombre: "Rubén", apellido: "Fernández", edad: 22}
+%Persona{apellido: "Fernández", edad: 22, nombre: "Rubén"}
+iex(3)> persona.edad
+22
+iex(4)> persona.nombre
+"Rubén"
+---
 
