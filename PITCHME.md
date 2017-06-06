@@ -205,12 +205,13 @@ defmodule Persona do
 end
 ```
 
-```elixir
+```
 iex(2)> persona = %Persona{nombre: "Rubén", apellido: "Fernández", edad: 22}
 %Persona{apellido: "Fernández", edad: 22, nombre: "Rubén"}
 iex(3)> persona.edad
 22
 iex(4)> persona.nombre
 "Rubén"
+```
 ---
 
