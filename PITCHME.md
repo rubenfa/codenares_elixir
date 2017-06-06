@@ -93,7 +93,7 @@ printfn "%A" numeros10
 ---
 #### ¿Y cómo empecé con Elixir?
 
-![Image-Absolute](img/twitter.jpg)
+![Image-Absolute](img/twitter.png)
 ---
 ### ¿Qué es Elixir?
 ![Image-Absolute](img/valim.jpg)
