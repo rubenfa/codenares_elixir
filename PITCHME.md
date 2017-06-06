@@ -18,9 +18,9 @@
 
 ![Image-Absolute](img/caml1.png)
 
-- En la universidad |
-- En el laboratorio de Programación avanzada  |
-- **Curioso, pero inútil** |
+- En la universidad 
+- En el laboratorio de Programación avanzada  
+- **Curioso, pero inútil** 
 
 ---
 #### ¿Y después de tantos años por qué volver a la programación funcional?
@@ -234,3 +234,89 @@ defmodule MyModules.HelloWorld do
 end
 ```
 @[7-14]
+---
+#### Entonces descubrí el Pattern Matching
+![Image-Absolute](img/pattern-matching.jpg)
+---
+#### Pattern Matching (cláusulas de guarda)
+```
+defmodule MyModules.PatternMatching.HelloWorld do
+
+  def hello(selection) do   
+    get_message(selection)
+  end
+
+  defp get_message(s) when s == 0, do: IO.puts("Hello world")
+  defp get_message(s) when s == 1, do: IO.puts("Hello Codenares")
+  defp get_message(s) when s == 2, do: IO.puts("Hello Torrejón")
+  defp get_message(s), do: {:error, "Message not found"} 
+
+end
+```
+@[7-9]
+@[10]
+---
+#### Pattern Matching (tuplas)
+```
+defmodule MyModules.PatternMatching.Tuples do
+
+  def calculate({:sum, x, y}), do:  x + y
+  def calculate({:res, x, y}), do: x - y
+  def calculate({:mul, x, y}), do: x * y
+  def calculate({:div, x, y}), do: x / y
+  def calculate(other), do: {:error, "Operation not valid"}
+
+end
+```
+@[3-6]
+@[7]
+
+---
+
+#### Pattern Matching (listas)
+```elixir
+defmodule MyModules.PatternMatching.Lists do
+
+  def sum([]), do: 0
+  def sum([head | []]), do: head 
+  def sum([head |tail]), do:  head + sum(tail)
+ 
+end
+```
+
+---
+
+#### Pattern Matching (estructuras)
+```
+defmodule MyModules.PatternMatching.Player do
+  defstruct name: "", level: 1, type: :warrior, health: 100, alive: true
+
+  alias MyModules.PatternMatching.Player
+
+  def attack(%Player{alive: false}, _, _ ) do
+    {:error, "A dead player cannot attack"}
+  end
+
+  def attack(_,  %Player{alive: false}, _ ) do
+    {:error, "A player cannot attack a dead player"}
+  end
+
+  def attack(p1 = %Player{type: :warrior}, p2 = %Player{type: :wizard}, damage) do
+    update_health(p2, damage*2)
+  end
+
+  def attack(_, p2 = %Player{}, damage) do
+    update_health(p2, damage)
+  end
+
+  defp update_health(p = %Player{health: h}, damage) when h <= damage do
+    %{p | health: 0, alive: false}
+  end
+
+  defp update_health(p = %Player{health: h}, damage)  do
+    %{p | health: (p.health - damage)}
+  end
+end
+```
+@[6-12]
+@[14-20]
