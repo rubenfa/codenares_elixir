@@ -67,7 +67,7 @@ tail_fib(N)->
 ![Image-Absolute](img/mindfuck.jpg)
 ---
 
-#### Pues F#
+#### Pues F\#
 
 ```
 let extraeDigitos x = 
@@ -88,5 +88,27 @@ let numeros10 =
 let main argv = 
 printfn "%A" numeros10
 ```
+---
+#### ¿Y cómo empecé con Elixir?
+
+![Image-Absolute](img/mindfuck.jpg)
+---
+### ¿Qué es Elixir?
+![Image-Absolute](img/valim.jpg)
+- Creado por Jose Valim
+- Funcional
+- Dinámico
+- Diseñado para hacer aplicaciones mantenibles y escalables
+---
+#### Vamos, que es otro frikilenguaje, ¿o sirve para algo?
+
+- Elixir corre sobre la máquina virtual de Erlang (BEAM) (since 1986) 
+- Puedes hacer aplicaciones backend
+- Aplicaciones web con Phoenix (framework)
 
 ---
+#### Por fin, una sintaxis funcional que entiendo
++++?image=https://raw.githubusercontent.com/rubenfa/codenares_elixir/master/img/patricio2.jpg
+---
+
+
