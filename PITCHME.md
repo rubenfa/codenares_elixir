@@ -217,7 +217,7 @@ iex(4)> persona.nombre
 #### Elixir se organiza en módulos y funciones
 
 ```
-defmodule MyModules.HelloWorld do
+defmodule Codenares.HelloWorld do
 
   def hello(selection) do   
     get_message(selection)
@@ -240,7 +240,7 @@ end
 ---
 #### Pattern Matching (cláusulas de guarda)
 ```
-defmodule MyModules.PatternMatching.HelloWorld do
+defmodule Codenares.PatternMatching.HelloWorld do
 
   def hello(selection) do   
     get_message(selection)
@@ -258,7 +258,7 @@ end
 ---
 #### Pattern Matching (tuplas)
 ```
-defmodule MyModules.PatternMatching.Tuples do
+defmodule Codenares.PatternMatching.Tuples do
 
   def calculate({:sum, x, y}), do:  x + y
   def calculate({:res, x, y}), do: x - y
@@ -275,7 +275,7 @@ end
 
 #### Pattern Matching (listas)
 ```elixir
-defmodule MyModules.PatternMatching.Lists do
+defmodule Codenares.PatternMatching.Lists do
 
   def sum([]), do: 0
   def sum([head | []]), do: head 
@@ -288,10 +288,10 @@ end
 
 #### Pattern Matching (estructuras)
 ```
-defmodule MyModules.PatternMatching.Player do
+defmodule Codenares.PatternMatching.Player do
   defstruct name: "", level: 1, type: :warrior, health: 100, alive: true
 
-  alias MyModules.PatternMatching.Player
+  alias Codenares.PatternMatching.Player
 
   def attack(%Player{alive: false}, _, _ ) do
     {:error, "A dead player cannot attack"}
