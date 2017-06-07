@@ -324,7 +324,7 @@ end
 ---
 #### En definitiva el pattern matching es magia
 
-![Image-Absolute](img/pattern-matching.jpg)
+![Image-Absolute](img/bob.jpg)
 
 ---
 
@@ -336,8 +336,12 @@ end
 defmodule Codenares.Pipe.PipeOperator do
 
 @doc """
-Función que coge un número entero, extrae sus dígitos, filtra los dígitos pares, 
-los multiplica por 3, los da la vuelta y devuelve un string con el resultado
+Función que coge un número entero y:
+ - extrae sus dígitos
+ - filtra los dígitos pares
+ - los multiplica por 3
+ - los da la vuelta 
+ - devuelve un string con el resultado
 
 Ejemplo:
 
