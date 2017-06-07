@@ -350,10 +350,7 @@ end
 +++?image=https://raw.githubusercontent.com/rubenfa/codenares_elixir/master/img/patricio3.jpg
 ---
 #### La programación funcional va de transformar datos
-- POO
-![Image-Absolute](img/poo.png)
-- Fun
-![Image-Absolute](img/funcional.png)
+![Image-Absolute](img/functional-thinking.png)
 ---
 
 ```
@@ -376,7 +373,11 @@ Codenares.Pipe.PipeOperator.pipe(123456)
 require Integer
 
   def no_pipe(n) when is_integer(n) do
-    Enum.join(Enum.reverse(Enum.map(Enum.filter(Integer.digits(n), fn(x) -> Integer.is_even(x) end , fn(x) -> x * 3 end))))
+    Enum.join(
+      Enum.reverse(
+        Enum.map(
+          Enum.filter(
+            Integer.digits(n), fn(x) -> Integer.is_even(x) end , fn(x) -> x * 3 end))))
   end
 
   def no_pipe2(n) when is_integer(n) do
@@ -401,6 +402,6 @@ end
 ```
 
 @[3-15]
-@[19-21]
-@[23-30]
-@[32-39]
+@[19-25]
+@[27-34]
+@[36-43]
