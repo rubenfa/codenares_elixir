@@ -102,6 +102,11 @@ printfn "%A" numeros10
 - Dinámico
 - Diseñado para hacer aplicaciones mantenibles y escalables
 ---
+### Características típicas de la programación funcional
+- Inmutable
+- Funciones de primera clase
+- Recursividad
+---
 #### Vamos, que es otro frikilenguaje, ¿o sirve para algo?
 
 - Elixir corre sobre la máquina virtual de Erlang (BEAM) (since 1986) 
@@ -218,11 +223,28 @@ iex(4)> persona.nombre
 
 ```
 defmodule Codenares.HelloWorld do
+  def hello() do   
+    IO.puts("Hello world")
+  end
+
+  def hello(msg) do   
+    IO.puts("Hello world: #{msg}")
+  end
+end
+```
+```
+Codenares.HelloWorld.hello/0
+Codenares.HelloWorld.hello/1
+```
+---
+
+```
+defmodule Codenares.HelloWorld do
 
   def hello(selection) do   
     get_message(selection)
   end
-
+  
   defp get_message(s) do
     cond do
       s == 0 -> IO.puts("Hello world")
@@ -328,8 +350,14 @@ end
 
 ---
 
-#### Pensando en programación funcional
-
+#### ¿Estoy pensando en programación funcional?
++++?image=https://raw.githubusercontent.com/rubenfa/codenares_elixir/master/img/patricio3.jpg
+---
+#### La programación funcional va de transformar datos
+- POO
+![Image-Absolute](img/poo.png)
+- Fun
+![Image-Absolute](img/funcional.png)
 ---
 
 ```
@@ -376,7 +404,7 @@ require Integer
 end
 ```
 
-@[3-11]
-@[15-17]
-@[19-26]
-@[28-35]
+@[3-15]
+@[19-21]
+@[23-30]
+@[32-39]
