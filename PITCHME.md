@@ -69,7 +69,7 @@ tail_fib(N)->
 ![Image-Absolute](img/mindfuck.jpg)
 ---
 
-#### Pues F\#
+#### Pues Fsharp
 
 ```
 let extraeDigitos x = 
@@ -85,10 +85,6 @@ let numeros10 =
             if (sumaDigitos (extraeDigitos i)) = 10 then
                 yield i
     ]
-            
-[<EntryPoint>]
-let main argv = 
-printfn "%A" numeros10
 ```
 ---
 #### ¿Y cómo empecé con Elixir?
