@@ -104,7 +104,7 @@ printfn "%A" numeros10
 ---
 ### Características típicas de la programación funcional
 - Inmutable
-- Funciones de primera clase
+- Las funciones son miembros de primera clase
 - Recursividad
 ---
 #### Vamos, que es otro frikilenguaje, ¿o sirve para algo?
