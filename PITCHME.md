@@ -407,7 +407,11 @@ end
 @[36-43]
 ---
 
-#### Elixir avanzado
+### Elixir avanzado
 
 ![Image-Absolute](img/doctor_patricio.jpg)
 
+
+#### OTP (Open Telecom Platform)
+
+- Conjunto de librerías y herramientas escritas en Erlang
