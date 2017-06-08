@@ -431,8 +431,6 @@ end
 <span style="font-size:0.6em; color:gray">See <a href="http://blog.scottlogic.com/2014/08/15/using-akka-and-scala-to-render-a-mandelbrot-set.html" target="_blank">http://blog.scottlogic.com/2014/08/15/using-akka-and-scala-to-render-a-mandelbrot-set.html</a> </span>
 
 ---
-
-
 ```elixir
 defmodule Codenares.OTP.Calculator do
   use GenServer
