@@ -66,7 +66,7 @@ tail_fib(N)->
 ```
 
 ---
-![Image-Absolute](img/mindfuck.jpg)
+![Image-Absolute](img/DumbPatricio.png)
 ---
 
 #### Pues Fsharp
