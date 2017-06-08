@@ -1,3 +1,19 @@
-/*div > section {
-    width: 1124px !important;
-}*/
+.reveal pre {
+    display: block;
+    width: 100%;
+    text-align: left;
+    font-size: .55em;
+    line-height: 1.2em;
+    word-wrap: break-word;
+    box-shadow: 0 0 6px rgba(0,0,0,.3);
+}
+
+.reveal pre code {
+    display: block;
+    padding: 5px;
+    overflow: auto;
+    max-height: 400px;
+    word-wrap: normal;
+    width: 1024px;
+}
+

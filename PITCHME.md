@@ -24,7 +24,7 @@
 
 ---
 #### ¿Y después de tantos años por qué volver a la programación funcional?
-+++?image=https://raw.githubusercontent.com/rubenfa/codenares_elixir/master/img/awesome.jpg
++++?image=https://raw.githubusercontent.com/rubenfa/codenares_elixir/master/img/executive_patricio.jpg
 ---
 
 ### ¿Pero qué lenguaje elegir?
@@ -66,7 +66,7 @@ tail_fib(N)->
 ```
 
 ---
-![Image-Absolute](img/mindfuck.jpg)
+![Image-Absolute](img/DumbPatricio.png)
 ---
 
 #### Pues Fsharp
@@ -278,7 +278,7 @@ end
 ```
 defmodule Codenares.PatternMatching.Tuples do
 
-  def calculate({:sum, x, y}), do:  x + y
+  def calculate({:sum, x, y}), do: x + y
   def calculate({:res, x, y}), do: x - y
   def calculate({:mul, x, y}), do: x * y
   def calculate({:div, x, y}), do: x / y
@@ -404,6 +404,16 @@ end
 ```
 
 @[3-15]
-@[19-25]
 @[27-34]
+@[19-25]
 @[36-43]
+---
+
+### Elixir avanzado
+
+![Image-Absolute](img/doctor_patricio.jpg)
+
+
+#### OTP (Open Telecom Platform)
+
+- Conjunto de librerías y herramientas escritas en Erlang
