@@ -12,7 +12,6 @@
                         'Elixir.Codenares.PatternMatching.Lists',
                         'Elixir.Codenares.PatternMatching.Player',
                         'Elixir.Codenares.PatternMatching.Tuples',
-                        'Elixir.Codenares.Pipe.CustomPipeOperator',
                         'Elixir.Codenares.Pipe.PipeOperator',
                         'Elixir.Codenares.Testing.ExampleDocTest',
                         'Elixir.Codenares.Testing.StringCalculator']},

@@ -351,6 +351,7 @@ end
 ---
 #### La programación funcional va de transformar datos
 ![Image-Absolute](img/functional-thinking.png)
+<span style="font-size:0.6em; color:gray">See <a href="https://pragprog.com/book/elixir/programming-elixir" target="_blank"> Programming Elixir by Dave Thomas</a> </span>
 ---
 
 ```
@@ -413,7 +414,94 @@ end
 
 ![Image-Absolute](img/doctor_patricio.jpg)
 
+---
 
 #### OTP (Open Telecom Platform)
 
-- Conjunto de librerías y herramientas escritas en Erlang
+- Conjunto de librerías y herramientas utilizadas para gestionar sistemas distribuidos.
+- Inicialmente pensado para gestionar centralitas telefónicas.
+- Utiliza un modelo de actores para gestionar concurrencia.
+
+---
+
+#### Modelo de actores
+
+![Image-Absolute](img/ActorModel.png)
+
+<span style="font-size:0.6em; color:gray">See <a href="http://blog.scottlogic.com/2014/08/15/using-akka-and-scala-to-render-a-mandelbrot-set.html" target="_blank">http://blog.scottlogic.com/2014/08/15/using-akka-and-scala-to-render-a-mandelbrot-set.html</a> </span>
+
+---
+
+
+```elixir
+defmodule Codenares.OTP.Calculator do
+  use GenServer
+
+  # INTERFACE
+  def start_link(current, name) do
+    GenServer.start_link(__MODULE__, current, name: name )
+  end
+
+  def add(p_name, n) when is_number(n) do
+    GenServer.cast(p_name, {:add, n})
+  end
+
+  def sub(p_name, n) when is_number(n) do
+    GenServer.cast(p_name, {:sub, n})
+  end
+
+  def mult(p_name, n) when is_number(n) do
+    GenServer.call(p_name, {:mult, n})
+  end
+
+  def div(p_name, n) when is_number(n) do
+    GenServer.call(p_name, {:div, n})
+  end
+
+  def get_current(p_name) do    
+    GenServer.call(p_name, :current)
+  end
+
+  def stop do
+    GenServer.stop(:calculator)
+  end
+
+  # IMPLEMENTACIÓN GenServer
+
+  def handle_call(:current, _from, current) do
+    {:reply, current, current}
+  end
+
+  def handle_call({:div, n}, _from, current) do
+    {:reply, current / n, current / n}
+  end
+
+  def handle_call({:mult, n}, _from, current) do
+    {:reply, current * n, current * n}
+  end
+
+  def handle_cast({:add, n}, current) do
+    {:noreply, current + n }
+  end
+
+  def handle_cast({:sub, n}, current) do
+    {:noreply, current - n }
+  end
+
+  def terminate(reason, _status) do
+    IO.puts "Stop because #{inspect reason}"
+    :ok 
+  end 
+end
+```
+
+@[35-45]
+@[47-53]
+@[5-7]
+@[17-27]
+@[9-15]
+---
+
+#### Un ejemplo en funcionamiento
+
+![Image-Absolute](img/iex-genserver.png)
