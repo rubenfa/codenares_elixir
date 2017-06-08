@@ -24,7 +24,7 @@
 
 ---
 #### ¿Y después de tantos años por qué volver a la programación funcional?
-+++?image=https://raw.githubusercontent.com/rubenfa/codenares_elixir/master/img/awesome.jpg
++++?image=https://raw.githubusercontent.com/rubenfa/codenares_elixir/master/img/executive_patricio.jpg
 ---
 
 ### ¿Pero qué lenguaje elegir?
@@ -401,7 +401,13 @@ require Integer
 end
 ```
 
-@[3-15]
 @[19-25]
+@[3-15]
 @[27-34]
 @[36-43]
+---
+
+#### Elixir avanzado
+
+![Image-Absolute](img/doctor_patricio.jpg)
+
