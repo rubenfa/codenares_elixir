@@ -377,7 +377,9 @@ require Integer
       Enum.reverse(
         Enum.map(
           Enum.filter(
-            Integer.digits(n), fn(x) -> Integer.is_even(x) end , fn(x) -> x * 3 end))))
+            Integer.digits(n), fn(x) -> 
+              Integer.is_even(x) end , fn(x) -> x * 3 end
+              ))))
   end
 
   def no_pipe2(n) when is_integer(n) do
