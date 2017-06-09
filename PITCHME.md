@@ -533,7 +533,7 @@ defmodule Codenares.OTP.Supervisor do
 
   def init([]) do
     children = [
-      worker(Calculator, [0], [restart: :transient]) #El proceso se reinicia si se para de forma anormal
+      worker(Calculator, [0], [restart: :transient]) 
     ]
 
     supervise(children, strategy: :simple_one_for_one)
@@ -568,4 +568,8 @@ end
 #### Gracias por escuchar. ¿Preguntas?
 
 ![Image-Absolute](img/bob-gafas.jpg)
+
+  **Slides en: ** [https://gitpitch.com/rubenfa/codenares_elixir](https://gitpitch.com/rubenfa/codenares_elixir)
+  **Ejemplos en: ** [https://github.com/rubenfa/codenares_elixir](https://github.com/rubenfa/codenares_elixir)
+
 
