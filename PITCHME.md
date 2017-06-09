@@ -556,6 +556,11 @@ end
 
 ---
 
+#### Tememos herramientas de monitorización y debug
+
+![Image-Absolute](img/observer.png)
+
+---
 #### Otras cosas buenas de Elixir
 
 - **ExUnit**: framework para testing incluido de serie
