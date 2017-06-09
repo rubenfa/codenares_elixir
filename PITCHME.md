@@ -569,7 +569,7 @@ end
 
 ![Image-Absolute](img/bob-gafas.jpg)
 
- <span style:"font-size: 0.5em"> **Slides en: ** [https://gitpitch.com/rubenfa/codenares_elixir](https://gitpitch.com/rubenfa/codenares_elixir)</span>
- <span style:"font-size: 0.5em"> **Ejemplos en: ** [https://github.com/rubenfa/codenares_elixir](https://github.com/rubenfa/codenares_elixir)</span>
+ <span style="font-size: 0.7em"> **Slides en: ** [https://gitpitch.com/rubenfa/codenares_elixir](https://gitpitch.com/rubenfa/codenares_elixir)</span>
+ <span style="font-size: 0.7em"> **Ejemplos en: ** [https://github.com/rubenfa/codenares_elixir](https://github.com/rubenfa/codenares_elixir)</span>
 
 
