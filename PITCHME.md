@@ -503,3 +503,69 @@ end
 #### Un ejemplo en funcionamiento
 
 ![Image-Absolute](img/iex-genserver.png)
+
+---
+
+#### Let it crash, Fail fast
+
+- Los procesos en Elixir/Erlang tienen muy poco coste
+- Podemos levantar miles de  procesos en segundos
+- Los procesos son independientes y no comparten información
+- Por tanto **nos da igual que fallen**
+
+---
+
+### Supervisores
+
+```
+defmodule Codenares.OTP.Supervisor do
+  use Supervisor
+
+  alias Codenares.OTP.Calculator
+
+  def start_link do
+    Supervisor.start_link(__MODULE__, [], name: :supervisor)
+  end
+
+  def start_calculator(name) do
+    Supervisor.start_child(:supervisor, [name])
+  end
+
+  def init([]) do
+    children = [
+      worker(Calculator, [0], [restart: :transient]) #El proceso se reinicia si se para de forma anormal
+    ]
+
+    supervise(children, strategy: :simple_one_for_one)
+  end
+
+  def start_n_calculators(number) do
+     for n <- 1..number, do: start_calculator(String.to_atom("Calc_" <> to_string(n)    ))
+  end
+end
+```
+
+@[14-20]
+@[10-12]
+@[22-24]
+---
+
+#### No hay que tener miedo a lanzar procesos
+
++++?image=https://raw.githubusercontent.com/rubenfa/codenares_elixir/master/img/bob-clones.png
+
+---
+
+#### Otras cosas buenas de Elixir
+
+- **ExUnit**: framework para testing incluido de serie
+- **Mix**: herramienta para gestionarl las builds. Crea proyectos, compila, ejecuta tests, descarga dependencias ...
+- **Hex**: gestor de paquetes para Elixir y Erlang (estilo npm, Nuget o Maven)
+- **Macros**: podemos ampliar Elixir a nuestro gusto con metaprogramación
+
+---
+
+#### Gracias por escuchar. ¿Preguntas?
+
+![Image-Absolute](img/bob-gafas.jpg)
+
