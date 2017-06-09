@@ -1,6 +1,11 @@
 logo : img/logo.png
 #theme : night
 #highlight : railscasts
+
+theme : white
+highlight : github
+
+
 theme-override : css/PITCHME.css
 
 
